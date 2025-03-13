@@ -4,3 +4,7 @@ resource "aws_instance" "ec2_instance" {
     subnet_id = var.subnet_id
   
 }
+
+output "public_ip" {
+  value = aws_instance.ec2_instance.public_ip
+}

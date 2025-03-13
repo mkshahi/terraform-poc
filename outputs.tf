@@ -1,4 +1,4 @@
 output "aws_instance_ip" {
-  value = module.compute.publicip
+  value = module.compute.public_ip
 
 }
