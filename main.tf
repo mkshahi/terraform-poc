@@ -16,6 +16,8 @@ module "database" {
 }
 
 module "network" {
-  source = "modules/network"
+  source = "./modules/network"
+  public_subnet_cidr = var.public_subnet_cidr
+  vpc_cidr = var.vpc_cidr
 
 }
