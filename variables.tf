@@ -19,3 +19,27 @@ variable "instance_type" {
   default = "t2.micro"
   
 }
+
+variable "db_instance_class" {
+  description = "The instance class for the RDS database"
+  type        = string
+  default     = "db.t3.micro"  # Default value for the database instance class
+}
+
+variable "db_name" {
+  description = "The name of the database"
+  type        = string
+  default     = "mydatabase"  # Default database name
+}
+
+variable "db_username" {
+  description = "The username for the database"
+  type        = string
+  default     = "admin"  # Default database username
+}
+
+variable "db_password" {
+  description = "The password for the database"
+  type        = string
+  sensitive   = true  # Mark as sensitive to hide in logs
+}
